@@ -25,7 +25,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    // secure: true, // enable this if using https
+    secure: true, // enable this if using https
     maxAge: 24 * 60 * 60 * 1000 // one day
   }
 }));
