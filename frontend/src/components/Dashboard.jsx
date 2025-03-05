@@ -21,21 +21,20 @@ const Dashboard = () => {
   const [letterContent, setLetterContent] = useState("");
   const [fileId, setFileId] = useState(null);
 
-// filepath: /C:/Users/asusa/OneDrive/Desktop/New folder/frontend/src/components/Dashboard.jsx
-useEffect(() => {
-  axios
-    .get(`${import.meta.env.VITE_BACKEND_URL}/auth/current_user`, {
-      withCredentials: true,
-    })
-    .then((res) => {
-      console.log("User data:", res.data); // Add this line to log the response
-      setUser(res.data);
-    })
-    .catch((err) => {
-      console.error("Error fetching user:", err);
-      console.log("Error response:", err.response); // Add this line to log the error response
-    });
-}, []);
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/auth/current_user`, {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log("User data:", res.data); // Add this line to log the response
+        setUser(res.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching user:", err);
+        console.log("Error response:", err.response); // Add this line to log the error response
+      });
+  }, []);
 
   // Helper function to strip HTML tags from a string
   const stripHtmlTags = (html) => {
