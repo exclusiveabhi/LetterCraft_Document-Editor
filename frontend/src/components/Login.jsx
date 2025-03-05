@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Card, CardContent, Typography, Button } from '@mui/material';
+import GoogleIcon from '@mui/icons-material/Google';
 
 const Login = () => {
   const handleGoogleLogin = () => {
@@ -8,11 +9,11 @@ const Login = () => {
   };
 
   return (
-    <Container maxWidth="sm" sx={{ mt: '20vh' }}>
+    <Container maxWidth="sm" sx={{ mt: '30vh' }}>
       <Card sx={{ textAlign: 'center', p: 2 }}>
         <CardContent>
           <Typography variant="h4" gutterBottom>
-            Welcome
+            Welcome, Sir/Mam
           </Typography>
           <Typography variant="body1" gutterBottom>
             Sign in with your Google account to continue.
@@ -21,9 +22,9 @@ const Login = () => {
             variant="contained"
             color="primary"
             onClick={handleGoogleLogin}
-            sx={{ mt: 2 }}
+            sx={{ mt: 2, display: 'flex', marginLeft:'170px', alignItems: 'center', gap: 1 }}
           >
-            Sign in with Google
+            Sign in with <GoogleIcon />
           </Button>
         </CardContent>
       </Card>
