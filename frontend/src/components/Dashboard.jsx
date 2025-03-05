@@ -101,11 +101,7 @@ const Dashboard = () => {
           px: 2,
         }}
       >
-        {!user ? (
-          <Box sx={{ mx: "auto", maxWidth: 600 }}>
-            <Alert severity="info">Loading user info...</Alert>
-          </Box>
-        ) : (
+     
           <Box sx={{ mx: "auto", maxWidth: "1200px" }}>
             <Typography variant="h4" align="center" gutterBottom>
               Welcome, {user.displayName}
@@ -174,7 +170,7 @@ const Dashboard = () => {
               </Grid>
             </Grid>
           </Box>
-        )}
+        
       </Box>
     </>
   );
