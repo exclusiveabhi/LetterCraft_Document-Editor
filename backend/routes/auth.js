@@ -12,7 +12,7 @@ router.get('/google/callback',
   passport.authenticate('google', { failureRedirect: '/auth/failure' }), 
   (req, res) => {
     // Successful authentication, redirect to the frontend dashboard.
-    res.redirect('http://localhost:5173/dashboard');
+    res.redirect('https://document-editor-sooty.vercel.app/dashboard');
 });
 
 // Failure route
@@ -26,7 +26,7 @@ router.get('/logout', (req, res, next) => {
     if (err) {
       return next(err);
     }
-    res.redirect('http://localhost:5173');
+    res.redirect('https://document-editor-sooty.vercel.app');
   });
 });
 

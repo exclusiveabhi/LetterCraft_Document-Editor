@@ -13,7 +13,7 @@ const app = express();
 
 // Enable CORS for your frontend and allow credentials
 app.use(cors({
-  origin: 'http://localhost:5173', // update if your frontend port is different
+  origin: 'https://document-editor-sooty.vercel.app', // update if your frontend port is different
   credentials: true
 }));
 
