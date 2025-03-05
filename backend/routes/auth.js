@@ -26,7 +26,7 @@ router.get('/logout', (req, res, next) => {
     if (err) {
       return next(err);
     }
-    res.redirect('https://document-editor-sooty.vercel.app');
+    res.redirect('https://document-editor-sooty.vercel.app/');
   });
 });
 
