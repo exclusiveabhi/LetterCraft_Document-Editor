@@ -34,6 +34,7 @@ router.get('/logout', (req, res, next) => {
 // Get current user info (used by frontend to display user details)
 router.get('/current_user', (req, res) => {
   res.send(req.user);
+  console.log(`user form auth file ${req.user}`);
 });
 
 module.exports = router;
